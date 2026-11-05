@@ -54,12 +54,14 @@
 
   <h2>Network access and Google Play billing</h2>
   <p>ZeroLedger does not require an account. Its core Ledger features work offline,
-    and the app does not send the records you enter to the developer. The app does
-    use network access for Google Play Billing to look up the unlock product,
-    check purchases, and process an unlock. Google handles the billing flow and
-    may process your Google Play account and purchase information under Google's
-    own privacy terms. ZeroLedger does not receive your payment credentials.
-    The app does not include advertising or analytics services.</p>
+    and the app does not send the records you enter to the developer. The app uses
+    network access for Google Play Billing to look up the unlock product, check
+    purchases, and process an unlock. If you enable automatic backups, Android's
+    document provider for the folder you select is used to write encrypted
+    backup files there. If you select Google Drive, Google handles Drive access
+    and storage under Google's own privacy terms. ZeroLedger does not receive
+    your payment credentials and does not operate a backup server. The app does
+    not include advertising or analytics services.</p>
   <p>We do not sell your Ledger records. If you choose to create, save, or share a
     PDF report, or save a backup using Android's file picker, the information in
     that file is made available to the storage provider, app, or person you
@@ -68,12 +70,25 @@
     practices; we do not receive a copy through these actions.</p>
 
   <h2>Backups and reports</h2>
-  <p>Backups are created only when you initiate the action. A backup file is
-    encrypted with the passphrase you provide. ZeroLedger does not save that
-    passphrase, operate a cloud backup service, or perform automatic background
-    backups. Keep the passphrase safe; a backup cannot be restored without it.
-    Backup files saved outside the app remain wherever you saved them until you
-    remove them.</p>
+  <p>You can create a manual encrypted backup or, if you enable the premium
+    automatic-backup feature, select a folder (for example, in Google Drive) for
+    daily backups.
+    Automatic backups are encrypted on your device with the passphrase you
+    provide before they are written to the selected folder. Android may defer
+    scheduled work depending on device and network conditions. Up to seven
+    automatic backup files are kept in the selected folder; older automatic
+    backup files may be deleted as new ones are created. Manual backup files are
+    not automatically deleted.</p>
+  <p>To run scheduled backups without asking for the passphrase each time,
+    ZeroLedger stores it locally in Android Keystore-protected app storage. The
+    selected folder reference and backup status are also stored on the device.
+    This information is not sent to ZeroLedger's servers; ZeroLedger does not
+    operate a backup server or require a ZeroLedger account. Google handles
+    access to and storage in the selected Drive folder under Google's privacy
+    terms. Keep the passphrase safe: it is required to restore backups, including
+    on another device. Removing the app or turning off automatic backups does
+    not delete backup files already saved in Drive. Files remain there until
+    you delete them.</p>
   <p>PDF reports may contain the Ledger and transaction details selected for the
     report. Review the report and choose its save or share destination carefully.</p>
 
